@@ -10,6 +10,7 @@
     --light-text-color: #FFFFFF;
     --black-text-color: #000000;
     --contacs-text-color: rgba(255, 255, 255, 0.6);
+    
 
     --icons-color: #AFB1B8;
 
@@ -137,9 +138,21 @@ img {
 
 .current{
     color: var(--accent-text-color);
+    position: relative;
+} 
+
+.current::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+
+    background-color: var(--accent-bg-color);
+    border-radius: 2px;;
 }
-
-
 /* .contacts-item {
     display: flex;
     gap: 10px;
@@ -312,9 +325,35 @@ img {
     color: var(--title-text-color);
 }
 
-/* .about-item {}
+.about-item {
+    position: relative;
+}
 
-.about-img {} */
+/* .about-img {}  */
+
+.label-box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.about-label{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 /14);
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--light-text-color);
+}
 
 /**
   |============================
@@ -489,7 +528,7 @@ img {
 
 .footer-title{
     font-weight: 700;
-    line-height: 16px;
+    line-height: calc(16 /14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
@@ -506,6 +545,45 @@ img {
 .footer .socials-link:hover,
 .footer .socials-link:focus{
     background-color: var(--accent-bg-color);
+}
+
+/**
+  |============================
+  | Modal
+  |============================
+*/
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+.form{
+    margin: auto;
+    height: 580px;
+    width: 528px;
+    padding: 8px;
+
+    background-color: var(--light-bg-color);
+}
+
+.btn-close{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    margin-left: auto;
 }
 
 /**
