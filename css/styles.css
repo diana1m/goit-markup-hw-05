@@ -568,16 +568,18 @@ img {
     display: flex;
 
     background-color: rgba(0, 0, 0, 0.1);
-    transition: opacity 1000ms, visibility 1000ms;
-    /* transform: scale(1.15);
-    transition: transform 1000ms;*/
+
+    /* transition: opacity 1000ms, visibility 1000ms; */
+    /* transform: scale(1); */
+    transition: transform 500ms;
 }
 
 .is-hidden{
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-}
+    transform: scale(0.5);
+} 
 
 .modal{
     margin: auto;
@@ -586,6 +588,12 @@ img {
     padding: 8px;
 
     background-color: var(--light-bg-color);
+    
+    /* animation-name: modal;
+    animation-duration: 1000ms;
+    animation-fill-mode: none;
+    animation-timing-function: ease-in-out;
+    animation-delay: 500ms; */
 }
 
 .btn-close{
@@ -600,6 +608,21 @@ img {
     margin-left: auto;
     cursor: pointer;
 }
+
+/* @keyframes modal{
+    0% {
+        transform: translateX(-1000px) scale(0.7);
+        opacity: 0.7;
+    }
+    80% {
+        transform: translateX(50px) scale(0.7);
+        opacity: 0.7;
+    }
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+} */
 
 /**
   |============================
